@@ -11,9 +11,10 @@ using System;
 namespace DatingAppWebApi.Migrations
 {
     [DbContext(typeof(DatingAppDbContext))]
-    partial class DatingAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180604051531_ExtendedUserClass")]
+    partial class ExtendedUserClass
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,8 +29,6 @@ namespace DatingAppWebApi.Migrations
                     b.Property<DateTime>("DateAdded");
 
                     b.Property<string>("Description");
-
-                    b.Property<bool>("IsMain");
 
                     b.Property<string>("Url");
 

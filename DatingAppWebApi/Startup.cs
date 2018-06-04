@@ -4,8 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using DatingAppDal.Context;
 using DatingAppDal.Repositories.AuthRepo;
+using DatingAppDal.Repositories.DatingRepo;
 using DatingAppWebApi.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -37,9 +39,10 @@ namespace DatingAppWebApi
         {
             var key = Encoding.ASCII.GetBytes(Configuration.GetSection("AppSettings:Token").Value);
             services.AddDbContext<DatingAppDbContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DatingAppCs"),b=>b.MigrationsAssembly("DatingAppWebApi")));
-            services.AddMvc();
-            services.AddCors();
+           
             services.AddScoped<IAuthRepository,AuthRepository>();
+            services.AddScoped<IDatingRepository, DatingRepository>();
+            services.AddAutoMapper();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).
                 AddJwtBearer(options =>
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -49,7 +52,12 @@ namespace DatingAppWebApi
                     IssuerSigningKey = new SymmetricSecurityKey(key)
 
                 });
+            services.AddCors();
+            services.AddMvc().AddJsonOptions(options => {
+                options.SerializerSettings.ReferenceLoopHandling= Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
