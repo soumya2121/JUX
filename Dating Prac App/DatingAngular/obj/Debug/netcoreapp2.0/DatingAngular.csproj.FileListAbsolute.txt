@@ -1,0 +1,11 @@
+D:\Projects\Dating Prac App\DatingAngular\bin\Debug\netcoreapp2.0\DatingAngular.deps.json
+D:\Projects\Dating Prac App\DatingAngular\bin\Debug\netcoreapp2.0\DatingAngular.runtimeconfig.json
+D:\Projects\Dating Prac App\DatingAngular\bin\Debug\netcoreapp2.0\DatingAngular.runtimeconfig.dev.json
+D:\Projects\Dating Prac App\DatingAngular\bin\Debug\netcoreapp2.0\DatingAngular.dll
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.csprojAssemblyReference.cache
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.csproj.CoreCompileInputs.cache
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.AssemblyInfoInputs.cache
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.AssemblyInfo.cs
+D:\Projects\Dating Prac App\DatingAngular\bin\Debug\netcoreapp2.0\DatingAngular.pdb
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.dll
+D:\Projects\Dating Prac App\DatingAngular\obj\Debug\netcoreapp2.0\DatingAngular.pdb
